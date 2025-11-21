@@ -156,6 +156,8 @@ class Iterator:
         return len(self.original_data)
 
 class XCsrfTokenWaiter:
+    """Fetches and caches an x-csrf token immediately, then refreshes every 120 seconds."""
+
     def __init__(self, cookie: Optional[str] = None, proxy: Optional[str] = None, on_start: bool = False):
         self.last_call_time = time.time()
         self.cookie = cookie
@@ -164,19 +166,24 @@ class XCsrfTokenWaiter:
         if on_start:
             loop = asyncio.get_event_loop()
             loop.run_until_complete(self.load_token())
-    
+
     async def load_token(self):
         self.x_crsf_token = await self.generate_x_csrf_token(self.cookie, self.proxy)
-    
+
     async def __call__(self) -> Union[None, str]:
         now = time.time()
         elapsed = now - self.last_call_time
-        
-        if elapsed > 120:
+
+        if self.x_crsf_token is None:
             self.x_crsf_token = await self.generate_x_csrf_token(self.cookie, self.proxy)
             if self.x_crsf_token:
                 self.last_call_time = now
-                
+        elif elapsed > 120:
+            new_token = await self.generate_x_csrf_token(self.cookie, self.proxy)
+            if new_token:
+                self.x_crsf_token = new_token
+                self.last_call_time = now
+
         return self.x_crsf_token
     
     @staticmethod
@@ -200,3 +207,4 @@ class RolimonsDataScraper:
         
     async def __call__(self) -> Union[None, Dict[str, items.RolimonsData]]:
         now = time.time()
+

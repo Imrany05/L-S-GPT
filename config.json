@@ -1,0 +1,21 @@
+{
+  "webhook": "https://discord.com/api/webhooks/1434207500399415456/pcZ9c0Wfqk-GupiwwVtCdLuEfM8qB9ia9mEcU9eXI3QB2k6kMf9MFpWK47i_I86wI4Tf",
+  "account": {
+    "otp_token": "je_otp_secret_of_leeg",
+    "cookie": "_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_CAEaAhACIhwKBGR1aWQSFDE1MTI5OTI4NjA1NDkyMzIxNzMwKAM.STVSAse_aWBIcchThmPfn_SgH8vO85ObzfeOQfCYKzsMA9_oKhSICxW01zzRq-NSafh3gj6L5U3HlEJPDTv0di3Fy8Yi8q01WhmmNHGIxzZ5CG9IZ2nl4DwhBjD8f3MpjReodN8KPaAuXiw-zCWbs3YMCjvzegWDzysQH_nQylTdaId7Fjyg2PevRW5l-66Cnd_fGXFGSXtaE_LR-PW3wxFHjECRfUfLnQuXTCZ295LoS7a0ADd27YmqsGYJnqV6F4AoOjxacmOn5n7hgH_3dAtazCL-ZxBUHNtl6b0ctaI_MYWvg6VKX5QD8ydqjPSWNyI3BEC4ei91qZKKAe4tqo94F8pDjzJ9CxvRBwfDdRK_SkEwR1Y-12EYzzeA5x8Z7tOcfCd3DKaRTjmo3dq4MigIt39K31Kle9ohnsrzY0E5v28KsSi1i8sfN5kM4ZUNQtskEOilSFqn_aU9Yt2-yifGqJWrT7tSNJnJqBJMtcMRV0LsA6wCfoUJgp5PE_AuCmzhxb-fakkF15FD-x7Qn8-Gx3RMFZMU2OY2fB1FovKgtWmTRMwcxb3sNfy2j52nhyDbGJThUjIOAOXvXS6kSGfF-BKRgkagaPmeB8-HFw5I7HjpGidtbIL1OE7qfDjTcZHbNSMXYpv-6QCkLDAl7FLCyoW1dyAWp6mjYGiDnIck0tblbAYXYn8mxtlYbTeipRe0Ys35PUwRmG2p-zw1l03X4JBKU0b_cg8c1BKHAT0IUKLu8qsCRpFumrgBoQmWgyBlcMTKW31u6vTO6CPk8odTnQJIPX-CCa7NssS3L92H2FEMljUtrQxqY7bdAoCUKxUW7zH48GZUBNz0ueTRYqoAYT5EfWwTxJqfWE9-Ev35H04h1F_HJusCUUF_gh41pjCv11Wd77hgTD9-xWWIRybmZo0EJcEMfcPlHK1OBY9YlZ7Ru5cyooWWrMU2JgOQWWASorYm8_9z8vzgPQxNhzmhY_ESdFW3oyCuZKNyKHyIZGwc4X2S7rVz_PetwLxYI6ouIbT2obraBaqA5SjctTH-LbezAWm3pDVOxJyNa8Fvbvy_iK4Wnj29GZVKjs83tyXUhaoVJJz8A8BYFTspU92OP-SSq-hJksGq3qgmJuOQpLWwlHYzM5775iyNTkNPv9y_Zg"
+  },
+  "buy_settings": {
+    "generic_settings": {
+      "min_percentage_off": 30,
+      "min_robux_off": 500,
+      "max_robux_cost": 1000,
+      "price_measurer": "value_rap",
+      "deal_filter_min_percentage": 10
+    }
+  },
+  "limiteds": [],
+  "proxies": [
+    "http://142.111.48.253:7030:thfebspz:px9tflhvp6ff"
+  ],
+  "deal_filter_min_percentage": 10
+}

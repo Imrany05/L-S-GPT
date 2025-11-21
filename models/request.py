@@ -73,10 +73,18 @@ class ResponseJsons:
         if "/items/details" in url:
             try:
                 data_list = []
+                if not isinstance(response_json, (dict, list)):
+                    return None
+
                 source = response_json.get("data", response_json) if isinstance(response_json, dict) else response_json
+
+                if not isinstance(source, list):
+                    return None
 
                 if isinstance(source, list):
                     for it in source:
+                        if not isinstance(it, dict):
+                            return None
                         data_list.append(items.Data(
                             item_id=int(it.get("id", it.get("itemId", 0))),
                             product_id=int(it.get("productId", it.get("collectibleProductId", 0) or 0)),
@@ -339,3 +347,4 @@ class Request:
                 await self.session.close()
 
         raise errors.Request.Failed(last_exc)
+
